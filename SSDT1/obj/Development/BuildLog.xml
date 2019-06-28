@@ -2,23 +2,28 @@
 <BuildLog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <ProjectInfo>
     <Name>SSDT1</Name>
-    <LastWriteTime>2019-06-26T20:39:31.4205642Z</LastWriteTime>
+    <LastWriteTime>2019-06-27T18:39:53.3427678Z</LastWriteTime>
     <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
   </ProjectInfo>
   <LastBuildInfos>
     <ProjectBuildItemInfo>
       <Name>Package_DataDownload.dtsx</Name>
-      <LastWriteTime>2019-06-26T19:35:32.9894232Z</LastWriteTime>
+      <LastWriteTime>2019-06-28T02:43:52.8172731Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>Package_DataUpload.dtsx</Name>
-      <LastWriteTime>2019-06-26T20:21:37.337449Z</LastWriteTime>
+      <LastWriteTime>2019-06-28T02:43:52.7302872Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>PackageTransfer_OnedataBaseToAnother.dtsx</Name>
-      <LastWriteTime>2019-06-26T21:14:16.1376748Z</LastWriteTime>
+      <LastWriteTime>2019-06-28T02:43:52.6670301Z</LastWriteTime>
+      <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
+    </ProjectBuildItemInfo>
+    <ProjectBuildItemInfo>
+      <Name>Child_Package1.dtsx</Name>
+      <LastWriteTime>2019-06-28T02:43:53.0219661Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
   </LastBuildInfos>

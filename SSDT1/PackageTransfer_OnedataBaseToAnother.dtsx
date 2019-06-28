@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="PackageTransfer_OnedataBaseToAnother"
   DTS:PackageType="5"
-  DTS:VersionBuild="16"
-  DTS:VersionGUID="{37BE225B-3F4A-4F71-AE10-A83DDFA5C0ED}">
+  DTS:VersionBuild="26"
+  DTS:VersionGUID="{5FE2F219-4EA5-46EF-AA15-D6AE2F4BECBC}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -23,7 +23,121 @@
       DTS:ObjectName="Excel Connection Manager">
       <DTS:ObjectData>
         <DTS:ConnectionManager
-          DTS:ConnectionString="Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Mamun\Semester6\COMP307_DataWearhouse\ForWalmart\Destination1\AQF_CAC1.xls;Extended Properties=&quot;Excel 8.0;HDR=YES&quot;;" />
+          DTS:ConnectionString="Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Mamun\Semester6\COMP307_DataWearhouse\ForWalmart\Destination1\AQF_CAC1.xls;Extended Properties=&quot;EXCEL 8.0;HDR=YES&quot;;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Flat File Connection Manager]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{CDF44702-EA7B-49B6-A7C4-D3E9261CB2AB}"
+      DTS:ObjectName="Flat File Connection Manager">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1033"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x0022_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\Mamun\Semester6\COMP307_DataWearhouse\ForWalmart\Source1\MRPC - 1.txt">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="&quot;ID&quot;"
+              DTS:DTSID="{2CC16A14-4A18-491B-A9B5-D5EE1447240F}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="&quot;MRPC&quot;"
+              DTS:DTSID="{AE532378-8925-4A08-A72D-81284B9653A3}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="&quot;Plant&quot;"
+              DTS:DTSID="{DDB64C01-8745-4F1E-9CE1-5167562607C1}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="&quot;FactoryLocation&quot;"
+              DTS:DTSID="{728B7020-DECB-42A0-B74D-643E35995A24}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Flat File Connection Manager 1]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{80157E3E-812A-4767-AD93-63921B1D5517}"
+      DTS:ObjectName="Flat File Connection Manager 1">
+      <DTS:PropertyExpression
+        DTS:Name="ConnectionString">@[User::FilePath]</DTS:PropertyExpression>
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1033"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x0022_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\Mamun\Semester6\COMP307_DataWearhouse\ForWalmart\Source1">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ID"
+              DTS:DTSID="{8B58617C-9427-4A58-A8DB-843EDDB38036}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="MRPC"
+              DTS:DTSID="{9E9655AB-8A94-4BE1-B20B-FD2CAD9F2088}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Plant"
+              DTS:DTSID="{829EF608-B2FF-466F-9AF0-5F1AB780E905}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="FactoryLocation"
+              DTS:DTSID="{CC4A4113-5FBC-45C2-A8A6-91C419612F7C}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
     <DTS:ConnectionManager
@@ -37,7 +151,17 @@
       </DTS:ObjectData>
     </DTS:ConnectionManager>
   </DTS:ConnectionManagers>
-  <DTS:Variables />
+  <DTS:Variables>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{D32DD661-AC69-455F-92DA-C0CFD8FAE993}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="FilePath">
+      <DTS:VariableValue
+        DTS:DataType="8">C:\Mamun\Semester6\COMP307_DataWearhouse\ForWalmart\Source1</DTS:VariableValue>
+    </DTS:Variable>
+  </DTS:Variables>
   <DTS:Executables>
     <DTS:Executable
       DTS:refId="Package\Data from Access to SQL Server"
@@ -556,8 +680,549 @@
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
           SQLTask:Connection="{056B8CD6-35BF-481D-9138-2D4E06EACFB4}"
-          SQLTask:SqlStatementSource="DELETE FROM AQF;&#xA;DELETE FROM JOIN_DATA;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          SQLTask:SqlStatementSource="DELETE FROM AQF;&#xA;DELETE FROM JOIN_DATA;&#xA;DELETE FROM ForEachMARCTable;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Execute Child Package Task"
+      DTS:CreationName="Microsoft.ExecutePackageTask"
+      DTS:Description="Execute Package Task"
+      DTS:DTSID="{52FA2DE0-B9B6-4A6A-8821-97C2F38767F1}"
+      DTS:ExecutableType="Microsoft.ExecutePackageTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Execute Child Package Task"
+      DTS:TaskContact="Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <ExecutePackageTask>
+          <UseProjectReference>True</UseProjectReference>
+          <PackageName>Child_Package1.dtsx</PackageName>
+        </ExecutePackageTask>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Foreach Loop Container"
+      DTS:CreationName="STOCK:FOREACHLOOP"
+      DTS:Description="Foreach Loop Container"
+      DTS:DTSID="{04825BB9-C800-439B-AA1B-F14487E70785}"
+      DTS:ExecutableType="STOCK:FOREACHLOOP"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Foreach Loop Container">
+      <DTS:ForEachEnumerator
+        DTS:CreationName="Microsoft.ForEachFileEnumerator"
+        DTS:DTSID="{10D57536-EB69-4A69-96B8-416F30DF2031}"
+        DTS:ObjectName="{10D57536-EB69-4A69-96B8-416F30DF2031}">
+        <DTS:ObjectData>
+          <ForEachFileEnumeratorProperties>
+            <FEFEProperty
+              Folder="C:\Mamun\Semester6\COMP307_DataWearhouse\ForWalmart\Source1" />
+            <FEFEProperty
+              FileSpec="*.txt" />
+            <FEFEProperty
+              FileNameRetrievalType="0" />
+            <FEFEProperty
+              Recurse="0" />
+          </ForEachFileEnumeratorProperties>
+        </DTS:ObjectData>
+      </DTS:ForEachEnumerator>
+      <DTS:Variables />
+      <DTS:Executables>
+        <DTS:Executable
+          DTS:refId="Package\Foreach Loop Container\Data Flow Task"
+          DTS:CreationName="Microsoft.Pipeline"
+          DTS:Description="Data Flow Task"
+          DTS:DTSID="{4C9016DC-5339-4A57-AEEE-F8402E8D1D2B}"
+          DTS:ExecutableType="Microsoft.Pipeline"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Data Flow Task"
+          DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <pipeline
+              version="1">
+              <components>
+                <component
+                  refId="Package\Foreach Loop Container\Data Flow Task\Flat File Source"
+                  componentClassID="Microsoft.FlatFileSource"
+                  contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+                  description="Flat File Source"
+                  localeId="1033"
+                  name="Flat File Source"
+                  usesDispositions="true"
+                  version="1">
+                  <properties>
+                    <property
+                      dataType="System.Boolean"
+                      description="Specifies whether zero-length columns are treated as null."
+                      name="RetainNulls">false</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
+                      name="FileNameColumnName"></property>
+                  </properties>
+                  <connections>
+                    <connection
+                      refId="Package\Foreach Loop Container\Data Flow Task\Flat File Source.Connections[FlatFileConnection]"
+                      connectionManagerID="Package.ConnectionManagers[Flat File Connection Manager 1]"
+                      connectionManagerRefId="Package.ConnectionManagers[Flat File Connection Manager 1]"
+                      name="FlatFileConnection" />
+                  </connections>
+                  <outputs>
+                    <output
+                      refId="Package\Foreach Loop Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output]"
+                      name="Flat File Source Output">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[ID]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[ID]"
+                          length="50"
+                          lineageId="Package\Foreach Loop Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[ID]"
+                          name="ID"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[MRPC]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[MRPC]"
+                          length="50"
+                          lineageId="Package\Foreach Loop Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[MRPC]"
+                          name="MRPC"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[Plant]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Plant]"
+                          length="50"
+                          lineageId="Package\Foreach Loop Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[Plant]"
+                          name="Plant"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[FactoryLocation]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[FactoryLocation]"
+                          length="50"
+                          lineageId="Package\Foreach Loop Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[FactoryLocation]"
+                          name="FactoryLocation"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                      </outputColumns>
+                      <externalMetadataColumns
+                        isUsed="True">
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[ID]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="ID" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[MRPC]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="MRPC" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Plant]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="Plant" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[FactoryLocation]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="FactoryLocation" />
+                      </externalMetadataColumns>
+                    </output>
+                    <output
+                      refId="Package\Foreach Loop Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Error Output]"
+                      isErrorOut="true"
+                      name="Flat File Source Error Output">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                          codePage="1252"
+                          dataType="text"
+                          description="Flat File Source Error Output Column"
+                          lineageId="Package\Foreach Loop Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                          name="Flat File Source Error Output Column" />
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\Foreach Loop Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\Foreach Loop Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+                <component
+                  refId="Package\Foreach Loop Container\Data Flow Task\OLE DB Destination"
+                  componentClassID="Microsoft.OLEDBDestination"
+                  contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+                  description="OLE DB Destination"
+                  name="OLE DB Destination"
+                  usesDispositions="true"
+                  version="4">
+                  <properties>
+                    <property
+                      dataType="System.Int32"
+                      description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                      name="CommandTimeout">0</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the name of the database object used to open a rowset."
+                      name="OpenRowset">[ForEachMARCTable]</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the variable that contains the name of the database object used to open a rowset."
+                      name="OpenRowsetVariable"></property>
+                    <property
+                      dataType="System.String"
+                      description="The SQL command to be executed."
+                      name="SqlCommand"
+                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the column code page to use when code page information is unavailable from the data source."
+                      name="DefaultCodePage">1252</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Forces the use of the DefaultCodePage property value when describing character data."
+                      name="AlwaysUseDefaultCodePage">false</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the mode used to access the database."
+                      name="AccessMode"
+                      typeConverter="AccessMode">3</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                      name="FastLoadKeepIdentity">false</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                      name="FastLoadKeepNulls">false</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                      name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                      name="FastLoadMaxInsertCommitSize">2147483647</property>
+                  </properties>
+                  <connections>
+                    <connection
+                      refId="Package\Foreach Loop Container\Data Flow Task\OLE DB Destination.Connections[OleDbConnection]"
+                      connectionManagerID="{056B8CD6-35BF-481D-9138-2D4E06EACFB4}:external"
+                      connectionManagerRefId="Project.ConnectionManagers[DESKTOP-K0O55OV_SQLEXPRESS.mamun]"
+                      description="The OLE DB runtime connection used to access the database."
+                      name="OleDbConnection" />
+                  </connections>
+                  <inputs>
+                    <input
+                      refId="Package\Foreach Loop Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input]"
+                      errorOrTruncationOperation="Insert"
+                      errorRowDisposition="FailComponent"
+                      hasSideEffects="true"
+                      name="OLE DB Destination Input">
+                      <inputColumns>
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[ID]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="ID"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ID]"
+                          lineageId="Package\Foreach Loop Container\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[ID]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[MRPC]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="MRPC"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[MRPC]"
+                          lineageId="Package\Foreach Loop Container\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[MRPC]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Plant]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="Plant"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Plant]"
+                          lineageId="Package\Foreach Loop Container\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[Plant]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[FactoryLocation]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="FactoryLocation"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[FactoryLocation]"
+                          lineageId="Package\Foreach Loop Container\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[FactoryLocation]" />
+                      </inputColumns>
+                      <externalMetadataColumns
+                        isUsed="True">
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ID]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="ID" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[MRPC]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="MRPC" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Plant]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="Plant" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[FactoryLocation]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="FactoryLocation" />
+                      </externalMetadataColumns>
+                    </input>
+                  </inputs>
+                  <outputs>
+                    <output
+                      refId="Package\Foreach Loop Container\Data Flow Task\OLE DB Destination.Outputs[OLE DB Destination Error Output]"
+                      exclusionGroup="1"
+                      isErrorOut="true"
+                      name="OLE DB Destination Error Output"
+                      synchronousInputId="Package\Foreach Loop Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input]">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Data Flow Task\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\Foreach Loop Container\Data Flow Task\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Data Flow Task\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\Foreach Loop Container\Data Flow Task\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+                <component
+                  refId="Package\Foreach Loop Container\Data Flow Task\Union All"
+                  componentClassID="Microsoft.UnionAll"
+                  contactInfo="Union All;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+                  description="Combines rows from multiple data flows without sorting. For example, add rows back to a data flow after correction of errors. If sorting is important, we recommend using the Merge transformation."
+                  name="Union All"
+                  version="1">
+                  <inputs>
+                    <input
+                      refId="Package\Foreach Loop Container\Data Flow Task\Union All.Inputs[Union All Input 1]"
+                      name="Union All Input 1">
+                      <inputColumns>
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\Data Flow Task\Union All.Inputs[Union All Input 1].Columns[ID]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="ID"
+                          lineageId="Package\Foreach Loop Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[ID]">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Output column lineage ID"
+                              name="OutputColumnLineageID">#{Package\Foreach Loop Container\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[ID]}</property>
+                          </properties>
+                        </inputColumn>
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\Data Flow Task\Union All.Inputs[Union All Input 1].Columns[MRPC]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="MRPC"
+                          lineageId="Package\Foreach Loop Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[MRPC]">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Output column lineage ID"
+                              name="OutputColumnLineageID">#{Package\Foreach Loop Container\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[MRPC]}</property>
+                          </properties>
+                        </inputColumn>
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\Data Flow Task\Union All.Inputs[Union All Input 1].Columns[Plant]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="Plant"
+                          lineageId="Package\Foreach Loop Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[Plant]">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Output column lineage ID"
+                              name="OutputColumnLineageID">#{Package\Foreach Loop Container\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[Plant]}</property>
+                          </properties>
+                        </inputColumn>
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\Data Flow Task\Union All.Inputs[Union All Input 1].Columns[FactoryLocation]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="FactoryLocation"
+                          lineageId="Package\Foreach Loop Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[FactoryLocation]">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Output column lineage ID"
+                              name="OutputColumnLineageID">#{Package\Foreach Loop Container\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[FactoryLocation]}</property>
+                          </properties>
+                        </inputColumn>
+                      </inputColumns>
+                      <externalMetadataColumns />
+                    </input>
+                    <input
+                      refId="Package\Foreach Loop Container\Data Flow Task\Union All.Inputs[Union All Input 2]"
+                      dangling="true"
+                      hasSideEffects="true"
+                      name="Union All Input 2">
+                      <externalMetadataColumns />
+                    </input>
+                  </inputs>
+                  <outputs>
+                    <output
+                      refId="Package\Foreach Loop Container\Data Flow Task\Union All.Outputs[Union All Output 1]"
+                      name="Union All Output 1">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[ID]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          lineageId="Package\Foreach Loop Container\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[ID]"
+                          name="ID" />
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[MRPC]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          lineageId="Package\Foreach Loop Container\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[MRPC]"
+                          name="MRPC" />
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[Plant]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          lineageId="Package\Foreach Loop Container\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[Plant]"
+                          name="Plant" />
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[FactoryLocation]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          lineageId="Package\Foreach Loop Container\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[FactoryLocation]"
+                          name="FactoryLocation" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+              </components>
+              <paths>
+                <path
+                  refId="Package\Foreach Loop Container\Data Flow Task.Paths[Flat File Source Output]"
+                  endId="Package\Foreach Loop Container\Data Flow Task\Union All.Inputs[Union All Input 1]"
+                  name="Flat File Source Output"
+                  startId="Package\Foreach Loop Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output]" />
+                <path
+                  refId="Package\Foreach Loop Container\Data Flow Task.Paths[Union All Output 1]"
+                  endId="Package\Foreach Loop Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input]"
+                  name="Union All Output 1"
+                  startId="Package\Foreach Loop Container\Data Flow Task\Union All.Outputs[Union All Output 1]" />
+              </paths>
+            </pipeline>
+          </DTS:ObjectData>
+        </DTS:Executable>
+      </DTS:Executables>
+      <DTS:ForEachVariableMappings>
+        <DTS:ForEachVariableMapping
+          DTS:CreationName=""
+          DTS:DTSID="{19378873-AF20-4340-97C5-1FF5BC860840}"
+          DTS:ObjectName="{19378873-AF20-4340-97C5-1FF5BC860840}"
+          DTS:ValueIndex="0"
+          DTS:VariableName="User::FilePath" />
+      </DTS:ForEachVariableMappings>
     </DTS:Executable>
     <DTS:Executable
       DTS:refId="Package\Plant Wise Data from Access to SQL Server"
@@ -2924,12 +3589,12 @@
               name="Sort Output"
               startId="Package\Plant Wise Data from Access to SQL Server\Sort 1.Outputs[Sort Output]" />
             <path
-              refId="Package\Plant Wise Data from Access to SQL Server.Paths[Union All Output 11]"
+              refId="Package\Plant Wise Data from Access to SQL Server.Paths[Union All Output 1]"
               endId="Package\Plant Wise Data from Access to SQL Server\Excel Destination.Inputs[Excel Destination Input]"
               name="Union All Output 1"
               startId="Package\Plant Wise Data from Access to SQL Server\Union All 2 CA01 and CAC1.Outputs[Union All Output 1]" />
             <path
-              refId="Package\Plant Wise Data from Access to SQL Server.Paths[Union All Output 1]"
+              refId="Package\Plant Wise Data from Access to SQL Server.Paths[Union All Output 11]"
               endId="Package\Plant Wise Data from Access to SQL Server\Upload to AQF_CAA1.Inputs[OLE DB Destination Input]"
               name="Union All Output 1"
               startId="Package\Plant Wise Data from Access to SQL Server\Union All 1.Outputs[Union All Output 1]" />
@@ -2960,6 +3625,22 @@
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint 1"
       DTS:To="Package\Plant Wise Data from Access to SQL Server" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 2]"
+      DTS:CreationName=""
+      DTS:DTSID="{D5421C3A-3FEA-4597-A45F-FE6A1BBD5A48}"
+      DTS:From="Package\Plant Wise Data from Access to SQL Server"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 2"
+      DTS:To="Package\Foreach Loop Container" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 3]"
+      DTS:CreationName=""
+      DTS:DTSID="{DF9D537E-CC47-4925-B22C-F8A38EC21DB1}"
+      DTS:From="Package\Foreach Loop Container"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 3"
+      DTS:To="Package\Execute Child Package Task" />
   </DTS:PrecedenceConstraints>
   <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
 <!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
@@ -2972,7 +3653,7 @@
     design-time-name="Package">
     <LayoutInfo>
       <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="229,42"
           Id="Package\Data from Access to SQL Server"
@@ -2981,6 +3662,25 @@
           Size="177,42"
           Id="Package\Delete Previous Data"
           TopLeft="298,168" />
+        <NodeLayout
+          Size="210,42"
+          Id="Package\Execute Child Package Task"
+          TopLeft="618,503" />
+        <NodeLayout
+          Size="151,42"
+          Id="Package\Foreach Loop Container\Data Flow Task"
+          TopLeft="102,12" />
+        <ContainerLayout
+          HeaderHeight="43"
+          IsExpanded="True"
+          PanelSize="258,109"
+          Size="258,152"
+          Id="Package\Foreach Loop Container"
+          TopLeft="269,448" />
+        <NodeLayout
+          Size="282,42"
+          Id="Package\Plant Wise Data from Access to SQL Server"
+          TopLeft="270,372" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint]"
           TopLeft="384.5,210">
@@ -3003,10 +3703,6 @@
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="282,42"
-          Id="Package\Plant Wise Data from Access to SQL Server"
-          TopLeft="270,372" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 1]"
           TopLeft="382.5,310">
@@ -3041,6 +3737,62 @@
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 2]"
+          TopLeft="411,414">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-13,34"
+              Start="0,0"
+              End="-13,26.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,13" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,13"
+                    Point2="0,17"
+                    Point3="-4,17" />
+                  <mssgle:LineSegment
+                    End="-9,17" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-9,17"
+                    Point2="-13,17"
+                    Point3="-13,21" />
+                  <mssgle:LineSegment
+                    End="-13,26.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 3]"
+          TopLeft="527,524">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="91,0"
+              Start="0,0"
+              End="83.5,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="83.5,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </Package>
@@ -3050,17 +3802,17 @@
       <GraphLayout
         Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="158,42"
-          Id="Package\Data from Access to SQL Server\ADO NET Source"
-          TopLeft="251,122" />
+          Size="121,42"
+          Id="Package\Data from Access to SQL Server\Sort AQF"
+          TopLeft="274,198" />
         <NodeLayout
           Size="171,42"
           Id="Package\Data from Access to SQL Server\OLE DB Destination"
           TopLeft="250,306" />
         <NodeLayout
-          Size="121,42"
-          Id="Package\Data from Access to SQL Server\Sort AQF"
-          TopLeft="274,198" />
+          Size="158,42"
+          Id="Package\Data from Access to SQL Server\ADO NET Source"
+          TopLeft="251,122" />
         <EdgeLayout
           Id="Package\Data from Access to SQL Server.Paths[ADO NET Source Output]"
           TopLeft="332.25,164">
@@ -3109,6 +3861,19 @@
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
+    design-time-name="Package\Data from Access to SQL Server\OLE DB Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
     design-time-name="Package\Data from Access to SQL Server\ADO NET Source">
     <Properties>
       <Property>
@@ -3116,8 +3881,96 @@
       </Property>
     </Properties>
   </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\Foreach Loop Container\Data Flow Task">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="171,42"
+          Id="Package\Foreach Loop Container\Data Flow Task\OLE DB Destination"
+          TopLeft="244,295" />
+        <NodeLayout
+          Size="121,42"
+          Id="Package\Foreach Loop Container\Data Flow Task\Union All"
+          TopLeft="241,197" />
+        <NodeLayout
+          Size="151,42"
+          Id="Package\Foreach Loop Container\Data Flow Task\Flat File Source"
+          TopLeft="234,79" />
+        <EdgeLayout
+          Id="Package\Foreach Loop Container\Data Flow Task.Paths[Union All Output 1]"
+          TopLeft="301.5,239">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="28,56"
+              Start="0,0"
+              End="28,48.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,24" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,24"
+                    Point2="0,28"
+                    Point3="4,28" />
+                  <mssgle:LineSegment
+                    End="24,28" />
+                  <mssgle:CubicBezierSegment
+                    Point1="24,28"
+                    Point2="28,28"
+                    Point3="28,32" />
+                  <mssgle:LineSegment
+                    End="28,48.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Foreach Loop Container\Data Flow Task.Paths[Flat File Source Output]"
+          TopLeft="309.5,121">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-8,76"
+              Start="0,0"
+              End="-8,68.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,34" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,34"
+                    Point2="0,38"
+                    Point3="-4,38" />
+                  <mssgle:LineSegment
+                    End="-4,38" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-4,38"
+                    Point2="-8,38"
+                    Point3="-8,42" />
+                  <mssgle:LineSegment
+                    End="-8,68.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\Data from Access to SQL Server\OLE DB Destination">
+    design-time-name="Package\Foreach Loop Container\Data Flow Task\OLE DB Destination">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -3135,95 +3988,105 @@
       <GraphLayout
         Capacity="64" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="158,42"
-          Id="Package\Plant Wise Data from Access to SQL Server\ADO NET Source"
-          TopLeft="709,18" />
+          Size="155,42"
+          Id="Package\Plant Wise Data from Access to SQL Server\Conditional Split"
+          TopLeft="405,210" />
         <NodeLayout
-          Size="127,42"
-          Id="Package\Plant Wise Data from Access to SQL Server\Aggregate"
-          TopLeft="84,231" />
+          Size="171,42"
+          Id="Package\Plant Wise Data from Access to SQL Server\OLE DB Destination"
+          TopLeft="861,391" />
         <NodeLayout
-          Size="121,42"
-          Id="Package\Plant Wise Data from Access to SQL Server\Union All"
-          TopLeft="88,324" />
-        <EdgeLayout
-          Id="Package\Plant Wise Data from Access to SQL Server.Paths[Aggregate Output 1]"
-          TopLeft="148,273">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,51"
-              Start="0,0"
-              End="0,43.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,43.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-8,13.75,16,16"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
+          Size="178,42"
+          Id="Package\Plant Wise Data from Access to SQL Server\Upload to AQF_CAB1"
+          TopLeft="379,419" />
+        <NodeLayout
+          Size="120,42"
+          Id="Package\Plant Wise Data from Access to SQL Server\Multicast"
+          TopLeft="167,122" />
+        <NodeLayout
+          Size="98,42"
+          Id="Package\Plant Wise Data from Access to SQL Server\Sort"
+          TopLeft="486,115" />
         <NodeLayout
           Size="167,42"
           Id="Package\Plant Wise Data from Access to SQL Server\ADO NET Source 1"
           TopLeft="143,17" />
         <NodeLayout
-          Size="155,42"
-          Id="Package\Plant Wise Data from Access to SQL Server\Conditional Split"
-          TopLeft="405,210" />
+          Size="207,42"
+          Id="Package\Plant Wise Data from Access to SQL Server\Union All 2 CA01 and CAC1"
+          TopLeft="499,318" />
+        <NodeLayout
+          Size="159,42"
+          Id="Package\Plant Wise Data from Access to SQL Server\Excel Destination"
+          TopLeft="570,421" />
+        <NodeLayout
+          Size="107,42"
+          Id="Package\Plant Wise Data from Access to SQL Server\Sort 1"
+          TopLeft="792,120" />
+        <NodeLayout
+          Size="127,42"
+          Id="Package\Plant Wise Data from Access to SQL Server\Aggregate"
+          TopLeft="84,231" />
         <NodeLayout
           Size="130,42"
           Id="Package\Plant Wise Data from Access to SQL Server\Union All 1"
           TopLeft="224,295" />
+        <NodeLayout
+          Size="178,42"
+          Id="Package\Plant Wise Data from Access to SQL Server\Upload to AQF_CAA1"
+          TopLeft="189,413" />
+        <NodeLayout
+          Size="130,42"
+          Id="Package\Plant Wise Data from Access to SQL Server\Merge Join"
+          TopLeft="722,202" />
+        <NodeLayout
+          Size="121,42"
+          Id="Package\Plant Wise Data from Access to SQL Server\Union All"
+          TopLeft="88,324" />
+        <NodeLayout
+          Size="158,42"
+          Id="Package\Plant Wise Data from Access to SQL Server\ADO NET Source"
+          TopLeft="709,18" />
+        <NodeLayout
+          Size="130,42"
+          Id="Package\Plant Wise Data from Access to SQL Server\Union All 2"
+          TopLeft="796,297" />
         <EdgeLayout
-          Id="Package\Plant Wise Data from Access to SQL Server.Paths[CAA1]"
-          TopLeft="445.75,252">
+          Id="Package\Plant Wise Data from Access to SQL Server.Paths[Union All Output 12]"
+          TopLeft="861,339">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-156.75,43"
+              EndConnector="85.5,52"
               Start="0,0"
-              End="-156.75,35.5">
+              End="85.5,44.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,10.8181818181818" />
+                    End="0,22" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,10.8181818181818"
-                    Point2="0,14.8181818181818"
-                    Point3="-4,14.8181818181818" />
+                    Point1="0,22"
+                    Point2="0,26"
+                    Point3="4,26" />
                   <mssgle:LineSegment
-                    End="-152.75,14.8181818181818" />
+                    End="81.5,26" />
                   <mssgle:CubicBezierSegment
-                    Point1="-152.75,14.8181818181818"
-                    Point2="-156.75,14.8181818181818"
-                    Point3="-156.75,18.8181818181818" />
+                    Point1="81.5,26"
+                    Point2="85.5,26"
+                    Point3="85.5,30" />
                   <mssgle:LineSegment
-                    End="-156.75,35.5" />
+                    End="85.5,44.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-99.20421875,19.8181818181818,41.6584375,16"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="178,42"
-          Id="Package\Plant Wise Data from Access to SQL Server\Upload to AQF_CAA1"
-          TopLeft="189,413" />
         <EdgeLayout
-          Id="Package\Plant Wise Data from Access to SQL Server.Paths[Union All Output 1]"
+          Id="Package\Plant Wise Data from Access to SQL Server.Paths[Union All Output 11]"
           TopLeft="289,337">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -3257,163 +4120,7 @@
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Plant Wise Data from Access to SQL Server.Paths[Conditional Split Default Output]"
-          TopLeft="445.75,252">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-156.75,43"
-              Start="0,0"
-              End="-156.75,35.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,10.8181818181818" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,10.8181818181818"
-                    Point2="0,14.8181818181818"
-                    Point3="-4,14.8181818181818" />
-                  <mssgle:LineSegment
-                    End="-152.75,14.8181818181818" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-152.75,14.8181818181818"
-                    Point2="-156.75,14.8181818181818"
-                    Point3="-156.75,18.8181818181818" />
-                  <mssgle:LineSegment
-                    End="-156.75,35.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-148.98890625,19.8181818181818,141.2278125,11.658203125"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="178,42"
-          Id="Package\Plant Wise Data from Access to SQL Server\Upload to AQF_CAB1"
-          TopLeft="379,419" />
-        <EdgeLayout
-          Id="Package\Plant Wise Data from Access to SQL Server.Paths[CAB1]"
-          TopLeft="482.5,252">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-14.5,167"
-              Start="0,0"
-              End="-14.5,159.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,79.5" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,79.5"
-                    Point2="0,83.5"
-                    Point3="-4,83.5" />
-                  <mssgle:LineSegment
-                    End="-10.5,83.5" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-10.5,83.5"
-                    Point2="-14.5,83.5"
-                    Point3="-14.5,87.5" />
-                  <mssgle:LineSegment
-                    End="-14.5,159.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-19.3630859375,88.5,24.226171875,9.5341796875"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="159,42"
-          Id="Package\Plant Wise Data from Access to SQL Server\Excel Destination"
-          TopLeft="570,421" />
-        <NodeLayout
-          Size="207,42"
-          Id="Package\Plant Wise Data from Access to SQL Server\Union All 2 CA01 and CAC1"
-          TopLeft="499,318" />
-        <EdgeLayout
-          Id="Package\Plant Wise Data from Access to SQL Server.Paths[CA01]"
-          TopLeft="519.25,252">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="83.25,66"
-              Start="0,0"
-              End="83.25,58.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,18.7441860465116" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,18.7441860465116"
-                    Point2="0,22.7441860465116"
-                    Point3="4,22.7441860465116" />
-                  <mssgle:LineSegment
-                    End="79.25,22.7441860465116" />
-                  <mssgle:CubicBezierSegment
-                    Point1="79.25,22.7441860465116"
-                    Point2="83.25,22.7441860465116"
-                    Point3="83.25,26.7441860465116" />
-                  <mssgle:LineSegment
-                    End="83.25,58.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="29.7269140625,27.7441860465116,23.796171875,9.568359375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Plant Wise Data from Access to SQL Server.Paths[CAC1]"
-          TopLeft="519.25,252">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="83.25,66"
-              Start="0,0"
-              End="83.25,58.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,18.7441860465116" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,18.7441860465116"
-                    Point2="0,22.7441860465116"
-                    Point3="4,22.7441860465116" />
-                  <mssgle:LineSegment
-                    End="79.25,22.7441860465116" />
-                  <mssgle:CubicBezierSegment
-                    Point1="79.25,22.7441860465116"
-                    Point2="83.25,22.7441860465116"
-                    Point3="83.25,26.7441860465116" />
-                  <mssgle:LineSegment
-                    End="83.25,58.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="29.4519140625,27.7441860465116,24.346171875,9.5341796875"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Plant Wise Data from Access to SQL Server.Paths[Union All Output 11]"
+          Id="Package\Plant Wise Data from Access to SQL Server.Paths[Union All Output 1]"
           TopLeft="602.5,360">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -3446,24 +4153,88 @@
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="120,42"
-          Id="Package\Plant Wise Data from Access to SQL Server\Multicast"
-          TopLeft="167,122" />
         <EdgeLayout
-          Id="Package\Plant Wise Data from Access to SQL Server.Paths[ADO NET Source Output]"
-          TopLeft="226.75,59">
+          Id="Package\Plant Wise Data from Access to SQL Server.Paths[Sort Output1]"
+          TopLeft="845.5,162">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,63"
+              EndConnector="-38.1666666666666,40"
               Start="0,0"
-              End="0,55.5">
+              End="-38.1666666666666,32.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,55.5" />
+                    End="0,19.7082066869301" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,19.7082066869301"
+                    Point2="0,23.7082066869301"
+                    Point3="-4,23.7082066869301" />
+                  <mssgle:LineSegment
+                    End="-34.1666666666666,23.7082066869301" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-34.1666666666666,23.7082066869301"
+                    Point2="-38.1666666666666,23.7082066869301"
+                    Point3="-38.1666666666666,27.7082066869301" />
+                  <mssgle:LineSegment
+                    End="-38.1666666666666,32.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Plant Wise Data from Access to SQL Server.Paths[Sort Output]"
+          TopLeft="535,157">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="231.666666666667,45"
+              Start="0,0"
+              End="231.666666666667,37.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,22.6717325227964" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,22.6717325227964"
+                    Point2="0,26.6717325227964"
+                    Point3="4,26.6717325227964" />
+                  <mssgle:LineSegment
+                    End="227.666666666667,26.6717325227964" />
+                  <mssgle:CubicBezierSegment
+                    Point1="227.666666666667,26.6717325227964"
+                    Point2="231.666666666667,26.6717325227964"
+                    Point3="231.666666666667,30.6717325227964" />
+                  <mssgle:LineSegment
+                    End="231.666666666667,37.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Plant Wise Data from Access to SQL Server.Paths[Multicast Output 4]"
+          TopLeft="287,139.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="199,0"
+              Start="0,0"
+              End="191.5,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="191.5,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -3540,28 +4311,32 @@
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="130,42"
-          Id="Package\Plant Wise Data from Access to SQL Server\Merge Join"
-          TopLeft="722,202" />
-        <NodeLayout
-          Size="98,42"
-          Id="Package\Plant Wise Data from Access to SQL Server\Sort"
-          TopLeft="486,115" />
         <EdgeLayout
-          Id="Package\Plant Wise Data from Access to SQL Server.Paths[Multicast Output 4]"
-          TopLeft="287,139.5">
+          Id="Package\Plant Wise Data from Access to SQL Server.Paths[Merge Join Output]"
+          TopLeft="787,244">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="199,0"
+              EndConnector="74,53"
               Start="0,0"
-              End="191.5,0">
+              End="74,45.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="191.5,0" />
+                    End="0,22.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,22.5"
+                    Point2="0,26.5"
+                    Point3="4,26.5" />
+                  <mssgle:LineSegment
+                    End="70,26.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="70,26.5"
+                    Point2="74,26.5"
+                    Point3="74,30.5" />
+                  <mssgle:LineSegment
+                    End="74,45.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -3571,31 +4346,199 @@
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Plant Wise Data from Access to SQL Server.Paths[Sort Output]"
-          TopLeft="535,157">
+          Id="Package\Plant Wise Data from Access to SQL Server.Paths[Conditional Split Default Output]"
+          TopLeft="445.75,252">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="231.666666666667,45"
+              EndConnector="-156.75,43"
               Start="0,0"
-              End="231.666666666667,37.5">
+              End="-156.75,35.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,22.6717325227964" />
+                    End="0,10.8181818181818" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,22.6717325227964"
-                    Point2="0,26.6717325227964"
-                    Point3="4,26.6717325227964" />
+                    Point1="0,10.8181818181818"
+                    Point2="0,14.8181818181818"
+                    Point3="-4,14.8181818181818" />
                   <mssgle:LineSegment
-                    End="227.666666666667,26.6717325227964" />
+                    End="-152.75,14.8181818181818" />
                   <mssgle:CubicBezierSegment
-                    Point1="227.666666666667,26.6717325227964"
-                    Point2="231.666666666667,26.6717325227964"
-                    Point3="231.666666666667,30.6717325227964" />
+                    Point1="-152.75,14.8181818181818"
+                    Point2="-156.75,14.8181818181818"
+                    Point3="-156.75,18.8181818181818" />
                   <mssgle:LineSegment
-                    End="231.666666666667,37.5" />
+                    End="-156.75,35.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-148.98890625,19.8181818181818,141.2278125,11.658203125"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Plant Wise Data from Access to SQL Server.Paths[CAC1]"
+          TopLeft="519.25,252">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="83.25,66"
+              Start="0,0"
+              End="83.25,58.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,18.7441860465116" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,18.7441860465116"
+                    Point2="0,22.7441860465116"
+                    Point3="4,22.7441860465116" />
+                  <mssgle:LineSegment
+                    End="79.25,22.7441860465116" />
+                  <mssgle:CubicBezierSegment
+                    Point1="79.25,22.7441860465116"
+                    Point2="83.25,22.7441860465116"
+                    Point3="83.25,26.7441860465116" />
+                  <mssgle:LineSegment
+                    End="83.25,58.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="29.4519140625,27.7441860465116,24.346171875,9.5341796875"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Plant Wise Data from Access to SQL Server.Paths[CAB1]"
+          TopLeft="482.5,252">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-14.5,167"
+              Start="0,0"
+              End="-14.5,159.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,79.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,79.5"
+                    Point2="0,83.5"
+                    Point3="-4,83.5" />
+                  <mssgle:LineSegment
+                    End="-10.5,83.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-10.5,83.5"
+                    Point2="-14.5,83.5"
+                    Point3="-14.5,87.5" />
+                  <mssgle:LineSegment
+                    End="-14.5,159.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-19.3630859375,88.5,24.226171875,9.5341796875"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Plant Wise Data from Access to SQL Server.Paths[CAA1]"
+          TopLeft="445.75,252">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-156.75,43"
+              Start="0,0"
+              End="-156.75,35.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,10.8181818181818" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,10.8181818181818"
+                    Point2="0,14.8181818181818"
+                    Point3="-4,14.8181818181818" />
+                  <mssgle:LineSegment
+                    End="-152.75,14.8181818181818" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-152.75,14.8181818181818"
+                    Point2="-156.75,14.8181818181818"
+                    Point3="-156.75,18.8181818181818" />
+                  <mssgle:LineSegment
+                    End="-156.75,35.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-90.5430859375,19.8181818181818,24.336171875,9.5341796875"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Plant Wise Data from Access to SQL Server.Paths[CA01]"
+          TopLeft="519.25,252">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="83.25,66"
+              Start="0,0"
+              End="83.25,58.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,18.7441860465116" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,18.7441860465116"
+                    Point2="0,22.7441860465116"
+                    Point3="4,22.7441860465116" />
+                  <mssgle:LineSegment
+                    End="79.25,22.7441860465116" />
+                  <mssgle:CubicBezierSegment
+                    Point1="79.25,22.7441860465116"
+                    Point2="83.25,22.7441860465116"
+                    Point3="83.25,26.7441860465116" />
+                  <mssgle:LineSegment
+                    End="83.25,58.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="29.7269140625,27.7441860465116,23.796171875,9.568359375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Plant Wise Data from Access to SQL Server.Paths[Aggregate Output 1]"
+          TopLeft="148,273">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,51"
+              Start="0,0"
+              End="0,43.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,43.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -3604,10 +4547,6 @@
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="107,42"
-          Id="Package\Plant Wise Data from Access to SQL Server\Sort 1"
-          TopLeft="792,120" />
         <EdgeLayout
           Id="Package\Plant Wise Data from Access to SQL Server.Paths[ADO NET Source Output1]"
           TopLeft="788,60">
@@ -3643,109 +4582,19 @@
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Plant Wise Data from Access to SQL Server.Paths[Sort Output1]"
-          TopLeft="845.5,162">
+          Id="Package\Plant Wise Data from Access to SQL Server.Paths[ADO NET Source Output]"
+          TopLeft="226.75,59">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-38.1666666666666,40"
+              EndConnector="0,63"
               Start="0,0"
-              End="-38.1666666666666,32.5">
+              End="0,55.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,19.7082066869301" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,19.7082066869301"
-                    Point2="0,23.7082066869301"
-                    Point3="-4,23.7082066869301" />
-                  <mssgle:LineSegment
-                    End="-34.1666666666666,23.7082066869301" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-34.1666666666666,23.7082066869301"
-                    Point2="-38.1666666666666,23.7082066869301"
-                    Point3="-38.1666666666666,27.7082066869301" />
-                  <mssgle:LineSegment
-                    End="-38.1666666666666,32.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="130,42"
-          Id="Package\Plant Wise Data from Access to SQL Server\Union All 2"
-          TopLeft="796,297" />
-        <EdgeLayout
-          Id="Package\Plant Wise Data from Access to SQL Server.Paths[Merge Join Output]"
-          TopLeft="787,244">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="74,53"
-              Start="0,0"
-              End="74,45.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,22.5" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,22.5"
-                    Point2="0,26.5"
-                    Point3="4,26.5" />
-                  <mssgle:LineSegment
-                    End="70,26.5" />
-                  <mssgle:CubicBezierSegment
-                    Point1="70,26.5"
-                    Point2="74,26.5"
-                    Point3="74,30.5" />
-                  <mssgle:LineSegment
-                    End="74,45.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="29,31.5,16,16"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="171,42"
-          Id="Package\Plant Wise Data from Access to SQL Server\OLE DB Destination"
-          TopLeft="861,391" />
-        <EdgeLayout
-          Id="Package\Plant Wise Data from Access to SQL Server.Paths[Union All Output 12]"
-          TopLeft="861,339">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="85.5,52"
-              Start="0,0"
-              End="85.5,44.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,22" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,22"
-                    Point2="0,26"
-                    Point3="4,26" />
-                  <mssgle:LineSegment
-                    End="81.5,26" />
-                  <mssgle:CubicBezierSegment
-                    Point1="81.5,26"
-                    Point2="85.5,26"
-                    Point3="85.5,30" />
-                  <mssgle:LineSegment
-                    End="85.5,44.5" />
+                    End="0,55.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -3758,23 +4607,7 @@
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\Plant Wise Data from Access to SQL Server\ADO NET Source">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Plant Wise Data from Access to SQL Server\ADO NET Source 1">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Plant Wise Data from Access to SQL Server\Upload to AQF_CAA1">
+    design-time-name="Package\Plant Wise Data from Access to SQL Server\OLE DB Destination">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -3800,6 +4633,14 @@
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
+    design-time-name="Package\Plant Wise Data from Access to SQL Server\ADO NET Source 1">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
     design-time-name="Package\Plant Wise Data from Access to SQL Server\Excel Destination">
     <Properties>
       <Property>
@@ -3813,7 +4654,7 @@
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Plant Wise Data from Access to SQL Server\OLE DB Destination">
+    design-time-name="Package\Plant Wise Data from Access to SQL Server\Upload to AQF_CAA1">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -3822,6 +4663,14 @@
         <Name>TableInfoObjectType</Name>
         <Value
           type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Plant Wise Data from Access to SQL Server\ADO NET Source">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
       </Property>
     </Properties>
   </PipelineComponentMetadata>

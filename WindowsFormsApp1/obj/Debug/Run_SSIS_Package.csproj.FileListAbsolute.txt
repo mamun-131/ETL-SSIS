@@ -1,0 +1,15 @@
+C:\Mamun\Semester6\COMP307_DataWearhouse\ForWalmart\SSDT1\ETL-SSIS\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe.config
+C:\Mamun\Semester6\COMP307_DataWearhouse\ForWalmart\SSDT1\ETL-SSIS\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe
+C:\Mamun\Semester6\COMP307_DataWearhouse\ForWalmart\SSDT1\ETL-SSIS\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.pdb
+C:\Mamun\Semester6\COMP307_DataWearhouse\ForWalmart\SSDT1\ETL-SSIS\WindowsFormsApp1\bin\Debug\Microsoft.SqlServer.ManagedDTS.dll
+C:\Mamun\Semester6\COMP307_DataWearhouse\ForWalmart\SSDT1\ETL-SSIS\WindowsFormsApp1\bin\Debug\Microsoft.SqlServer.PipelineHost.dll
+C:\Mamun\Semester6\COMP307_DataWearhouse\ForWalmart\SSDT1\ETL-SSIS\WindowsFormsApp1\obj\Debug\Run_SSIS_Package.csprojAssemblyReference.cache
+C:\Mamun\Semester6\COMP307_DataWearhouse\ForWalmart\SSDT1\ETL-SSIS\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Form1.resources
+C:\Mamun\Semester6\COMP307_DataWearhouse\ForWalmart\SSDT1\ETL-SSIS\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Properties.Resources.resources
+C:\Mamun\Semester6\COMP307_DataWearhouse\ForWalmart\SSDT1\ETL-SSIS\WindowsFormsApp1\obj\Debug\Run_SSIS_Package.csproj.GenerateResource.cache
+C:\Mamun\Semester6\COMP307_DataWearhouse\ForWalmart\SSDT1\ETL-SSIS\WindowsFormsApp1\obj\Debug\Run_SSIS_Package.csproj.CoreCompileInputs.cache
+C:\Mamun\Semester6\COMP307_DataWearhouse\ForWalmart\SSDT1\ETL-SSIS\WindowsFormsApp1\obj\Debug\Run_SSIS_Package.csproj.CopyComplete
+C:\Mamun\Semester6\COMP307_DataWearhouse\ForWalmart\SSDT1\ETL-SSIS\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
+C:\Mamun\Semester6\COMP307_DataWearhouse\ForWalmart\SSDT1\ETL-SSIS\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb
+C:\Mamun\Semester6\COMP307_DataWearhouse\ForWalmart\SSDT1\ETL-SSIS\WindowsFormsApp1\bin\Debug\Microsoft.SqlServer.DTSRuntimeWrap.dll
+C:\Mamun\Semester6\COMP307_DataWearhouse\ForWalmart\SSDT1\ETL-SSIS\WindowsFormsApp1\bin\Debug\Microsoft.SqlServer.DTSPipelineWrap.dll
